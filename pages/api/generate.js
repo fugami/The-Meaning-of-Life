@@ -10,6 +10,7 @@ export default async function (req, res) {
     model: "text-davinci-002",
     prompt: generatePrompt(req.body.animal),
     temperature: 0.6,
+  
   });
   res.status(200).json({ result: completion.data.choices[0].text });
 }
@@ -21,9 +22,9 @@ function generatePrompt(animal) {
   return `Tell me the following philosopher's answer to the meaning of life.
 
 Philosopher: Plato
-Answer: The meaning of life for Plato is the pursuit of knowledge
-Animal: Nietzsche
-Names: The meaning of life for Nietzsche is to live authentically and powerfully
+Answer: The meaning of life for Plato is the pursuit of knowledge.
+Philosopher: Nietzsche
+Answer: The meaning of life for Nietzsche is to live authentically and powerfully.
 Philosopher: ${capitalizedAnimal}
-Names:`;
+Answer:`;
 }
