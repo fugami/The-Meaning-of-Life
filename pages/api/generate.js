@@ -14,6 +14,7 @@ export default async function (req, res) {
   res.status(200).json({ result: completion.data.choices[0].text });
 }
 
+
 function generatePrompt(animal) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
