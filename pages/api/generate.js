@@ -17,12 +17,12 @@ export default async function (req, res) {
 function generatePrompt(animal) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Suggest three names for an animal that is a superhero.
+  return `Tell me the following philosopher's answer to the meaning of life.
 
-Animal: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-Animal: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-Animal: ${capitalizedAnimal}
+Philosopher: Plato
+Answer: The meaning of life for Plato is the pursuit of knowledge
+Animal: Nietzsche
+Names: The meaning of life for Nietzsche is to live authentically and powerfully
+Philosopher: ${capitalizedAnimal}
 Names:`;
 }
